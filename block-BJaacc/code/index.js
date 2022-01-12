@@ -29,8 +29,8 @@ console.log(students[42]);
 console.log(students.length);
 
 // 11. Can you define a key of `let or var` in any object? Reason.
-students['let'] = test1;
-students['var'] = test2;
+students['let'] = "test1";
+students['var'] = "test2";
 // Yes we can define a key of 'let or var' in any object. 
 
 // 12. Delete the `isAdult` property from the object `students`. Also, print the object before or after deleting the property
