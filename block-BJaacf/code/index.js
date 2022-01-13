@@ -10,7 +10,7 @@ console.log (sum);
 
 // 3. Calculate the average of array items and print it to the console using console.log()
 
-console.log (summ / numbers.length);
+console.log (sum / numbers.length);
 
 
 // 4. Find the highest number in the array and print it to the console using console.log()
