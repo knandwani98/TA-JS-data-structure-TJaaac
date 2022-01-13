@@ -9,10 +9,7 @@ for (let i = 0; i < numbers.length; i++) {
 console.log (sum);
 
 // 3. Calculate the average of array items and print it to the console using console.log()
-let summ = 0;
-for (let j = 0; j < numbers.length; j++) {
-    summ += numbers[j];
-}
+
 console.log (summ / numbers.length);
 
 
