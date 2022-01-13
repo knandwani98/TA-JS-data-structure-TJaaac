@@ -14,10 +14,22 @@ console.log (sum / numbers.length);
 
 
 // 4. Find the highest number in the array and print it to the console using console.log()
-console.log (Math.max (...numbers));
+let highestNum = numbers[0];
+for (let number of numbers) {
+    if (number > highestNum) {
+        highestNum = number;
+    }
+}
+console.log (highestNum, "Highest Number");
 
 // 5. Find the lowest number in the array and print it to the console using console.log()
-console.log (Math.min (...numbers));
+let lowestNum = numbers[0];
+for (let number of numbers) {
+    if (number < lowestNum) {
+        lowestNum = number;
+    }
+}
+console.log (lowestNum, "Lowest Number");
 
 // 6. Find the even numbers in the array and print them to the console using console.log()
 let evenNum = [];
