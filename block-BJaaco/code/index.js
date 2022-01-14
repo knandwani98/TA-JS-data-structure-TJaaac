@@ -91,7 +91,7 @@ function revert(input) {
 }
 
 // Uncomment the code below and test the output
-console.log(revert([1, 2, 3, 4])); // [4, 3, 2, 1]
+console.log(revert([1, 2, 3, 4])); // [4, 3, 2, 1] 
 console.log(revert(['a', 'd', 'c', 'b'])); // ['b', 'c', 'd', 'a']
 console.log(revert(['Ryan', 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
 
@@ -111,9 +111,10 @@ console.log(revert(['Ryan', 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
 function clear(input) {
   let revertArry = [];
   for (let i = input.length - 1; i >= 0; i--) {
-    revertArry.push (input[i]);
-  }
-  return result = revertArry.filter (i => i);
+    if (input[i]) {
+      revertArry.push (input[i]);
+    }
+  } return revertArry;
 }
 
 // Uncomment the code below and test the output
