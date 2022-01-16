@@ -18,114 +18,111 @@ Hint: (Structure of got variable)
   - And, each person is an object with "name" and "description" properties
 */
 
+
+// Question 
+
 // 1. Log the value of key "houses"
-console.log (got.houses, " - Houses");
+console.log (got.houses, " - Question 1");
 
 // 2. Log the length of the "houses" key
-console.log (got.houses.length, " - Total Houses");
+console.log (got.houses.length, " - Question 2");
 
 // 3. Log the name of all houses in got one by one
 for (let house of got.houses) {
-  console.log (house, " - All Houses");
+  console.log (house.name, " - Question 3");
 }
 
 // 4. Log the name of all the people in house Starks (index 0) one by one
-for (let people of got.houses[0].people) {
-  console.log (people, " - All in Stark House");
+for (let person of got.houses[0].people) {
+  console.log (person.name, " - Question 4");
 }
 
 // 5. Log the name of all the people in house Lannisters (index 1) one by one
-for (let people of got.houses[1].people) {
-  console.log (people, " - All in Lannister House");
-}
+for (let person of got.houses[1].people) {
+  console.log (person.name, " - Question 5");
+} 
 
 
 // 6. Log the description of all the people in house Lannisters (index 1) one by one
-for (let i = 0; i < got.houses[1].people.length; i++) {
-  console.log (got.houses[1].people[i].description, " - Description");
-}
 
 // 7. Log the name and description of all the people in house Lannisters (index 1) one by one like `I am [name] and my bio is [description]`
-for (let i = 0; i < got.houses[1].people.length; i++) {
-  console.log (`I am ${got.houses[1].people[i].name} and my bio is ${got.houses[1].people[i].description}`) ;
+for (person of got.houses[1].people) {
+  console.log (`My name is ${person.name} and my bio is ${person.description}  - Question 7`) ;
 }
 
 // 8. Log the name and description of all the people in house Starks (index 0) one by one like `I am [name] and my bio is [description]`
-for (let i = 0; i < got.houses[0].people.length; i++) {
-  console.log (`I am ${got.houses[0].people[i].name} and my bio is ${got.houses[0].people[i].description}`) ;
+for (person of got.houses[0].people) {
+  console.log (`My name is ${person.name} and my bio is ${person.description}`, ` - Question 8`) ;
 }
 
 // 9. Log the name and description of the people in house Starks whose name is `Robb Stark`
-for (let i = 0; i < got.houses[0].people.length; i++) {
-  if (got.houses[0].people[i].name == `Robb Stark`) {
-    console.log (got.houses[0].people[i]);
+for (person of got.houses[0].people) {
+  if (person.name === "Robb Stark") {
+    console.log (`My name is ${person.name} and my bio is ${person.description}`,` - Question 9`) ;
   }
 }
 
 // 10. Log the name and description of the people in house Lannisters whose name is `Tywin Lannister`
-for (let i = 0; i < got.houses[1].people.length; i++) {
-  if (got.houses[1].people[i].name == `Tywin Lannister`) {
-    console.log (got.houses[1].people[i]);
+for (person of got.houses[1].people) {
+  if (person.name === "Tywin Lannister") {
+    console.log (`My name is ${person.name} and my bio is ${person.description}`,` - Question 10`) ;
   }
 }
 
 // 11. Push the name of the houses in an array named `houseNames` and Log the array
 let houseNames = [];
-for (let i = 0; i < got.houses.length; i++) {
-  houseNames.push (got.houses[i].name);
+for (let house of got.houses) {
+  houseNames.push (house.name);
 } 
-console.log (houseNames);
+console.log (houseNames , `- Question 11`);
 
 // 12. Log the size of people in Starks house
-for (let i = 0; i < got.houses[0].people.length; i++) {
-  console.log (got.houses[0].people[i].length);
-}
+console.log (got.houses[0].people.length, " - Question 12");
 
 // 13. Log the size of people in Lannisters house
-for (let i = 0; i < got.houses[1].people.length; i++) {
-  console.log (got.houses[1].people[i].length);
-}
+console.log (got.houses[1].people.length, " - Question 13");
 
 // 14. Add the name and size of people in an object like {Starks: 4, Lannisters: 6} and log the object
 let houseNameAndNum = {};
-for (let i = 0; i < got.houses.length; i++){
-  houseNameAndNum[got.houses[i].name] = got.houses[i].people.length;
+for (let house of got.houses) {
+  houseNameAndNum[house.name] = house.people.length;
 }
-console.log (houseNameAndNum);
+console.log (houseNameAndNum, ` - Question 14`);
 
 // 15. Log the name of all the people of all the houses in got one by one
-for (let i = 0; i < got.houses.length; i++) {
-  for (let j = 0; j < got.houses[i].people.length; j++) {
-    console.log(got.houses[i].people[j].name)
+for (let house of got.houses) {
+  for (let person of house.people) {
+    console.log(person.name, ` - Question 15`);
   }
 }
 
-// 16. Push all names into a new array named `allPeople` and log the value array.
+// 16. Push all names into a new array named `allPeople` and log the value array. 
 let allPeople = [];
-for (let i = 0; i < got.houses.length; i++) {
-  for (let j = 0; j < got.houses[i].people.length; j++) {
-    allPeople.push(got.houses[i].people[j].name);
+for (let house of got.houses) {
+  for (let person of house.people) {
+    allPeople.push(person.name);
   }
-} console.log (allPeople);
+} console.log (allPeople,  ` - Question 16`);
 
 
 // 17. Log the value and length of `allPeople` array created above
-console.log (`Total Numbers are ${allPeople.length} and names are ${allPeople} `);
+console.log (allPeople, allPeople.length, ` - Question - 17`);
 
 // 18. Push all descriptions into an array named `allDescription`
 let allDescription = [];
-for (let j = 0; j < got.houses.length; j++) {
-  for (let i = 0; i < got.houses[j].people.length; i++) {
-    allDescription.push (`${got.houses[j].people[i].description}`) ;
+for (house of got.houses) {
+  for (let people of house.people) {
+    allDescription.push (people.description) ;
   }
 }
+
 // 19. Log the value and length `allDescription`
-console.log (`${allDescription.length} & ${allDescription}`);
+console.log (allDescription, allDescription.length, ` - Question 19`);
 
 // 20. Only the the description whose length is more than 30. (use .length property on string to get the length)
 
-for (let i = 0; i < allDescription.length; i++) {
-  if (allDescription[i].length > 30) {
-    console.log (allDescription);
+for (let description of allDescription) {
+  if (description.length > 30) {
+    console.log (description, ` - Question 20`);
   }
 }
